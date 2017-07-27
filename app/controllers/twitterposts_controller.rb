@@ -2,7 +2,7 @@ class TwitterpostsController < ApplicationController
   before_action :logged_in_user, only: [:create, :destroy]
    before_action :correct_user,   only: :destroy
 
-  def create
+   def create
     @twitterpost = current_user.twitterposts.build(twitterpost_params)
     if @twitterpost.save
       flash[:success] = "Twitterpost created!"
@@ -23,7 +23,7 @@ class TwitterpostsController < ApplicationController
   private
 
     def twitterpost_params
-       params.require(:micropost).permit(:content, :picture)
+       params.require(:twitterpost).permit(:content, :picture)
     end
 
     def correct_user
