@@ -1,0 +1,8 @@
+<li id="twitterpost-<%= twitterpost.id %>">
+  <%= link_to gravatar_for(twitterpost.user, size: 50), twitterpost.user %>
+  <span class="user"><%= link_to twitterpost.user.name, twitterpost.user %></span>
+  <span class="content"><%= twitterpost.content %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(twitterpost.created_at) %> ago.
+  </span>
+</li>

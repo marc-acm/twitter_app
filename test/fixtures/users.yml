@@ -8,12 +8,6 @@
  # name: MyString
   #email: MyString
 
-marc:
-  name: Marc Macariola
-  email: marc.macariola@yahoo.com
-  password_digest: <%= User.digest('password') %>
-  admin: true
-
 michael:
   name: Michael Example
   email: michael@example.com
