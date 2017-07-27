@@ -1,9 +1,5 @@
 class UsersController < ApplicationController
   
-def index
-end
-
-
 
 def show
     @user = User.find(params[:id])
@@ -17,7 +13,8 @@ def new
 def create
     @user = User.new(user_params)
     if @user.save
-    	flash[:success] = "Welcome to the Sample App!"
+       log_in @user
+    	flash[:success] = "Welcome to the Twitter App!"
      redirect_to @user
       # Handle a successful save.
     else
