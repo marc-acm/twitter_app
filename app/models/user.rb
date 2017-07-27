@@ -53,13 +53,16 @@ class User < ApplicationRecord
 
   # Defines a proto-feed.
   # See "Following users" for the full implementation.
+ 
+  # Returns a user's status feed.
   def feed
-    Twitterpost.where("user_id = ?", id)
+    Twitterpost.where("user_id IN (:following_ids) OR user_id = :user_id",
+                    following_ids: following_ids, user_id: id)
   end
 
-# Follows a user.
+# # Follows a user.
   def follow(other_user)
-    following << other_user
+    active_relationships.create(followed_id: other_user.id)
   end
 
   # Unfollows a user.
