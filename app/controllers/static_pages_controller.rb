@@ -1,6 +1,9 @@
 class StaticPagesController < ApplicationController
   def home
-  	  @twitterpost = current_user.twitterposts.build if logged_in?
+  	 if logged_in?
+      @twitterpost  = current_user.twitterposts.build
+      @feed_items = current_user.feed.paginate(page: params[:page])
+    end
   end
 
   def help
