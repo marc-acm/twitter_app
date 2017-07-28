@@ -9,6 +9,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body {
+    background: white url(images/IMG_2117.JPG);
+    margin: 0;
+    padding: 0;
+}
+
+
+
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
