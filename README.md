@@ -16,7 +16,7 @@ After this, you can open the terminal and locate the folder were the file is loc
 
 Once server is running, you can open the app using Google Chrome.
 
-## The Blog Site App
+## TWITTER_APP
 
 Running the App
 
@@ -32,5 +32,10 @@ After running the server, open a web browser (Google Chrome) and you can start n
 
 
 ![alt text](https://github.com/marc-acm/twitter_app/blob/master/twitter.png)
+
+
+
+Below is the link where you can actually try the app.
+https://twit-ter.herokuapp.com/"
 
 
